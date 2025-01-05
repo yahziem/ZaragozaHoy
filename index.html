@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias Minimalistas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Noticias Minimalistas</h1>
+  </header>
+
+  <main>
+    <div id="news-container">
+      <!-- Aquí se listarán las noticias -->
+    </div>
+  </main>
+
+  <footer>
+    <button id="login-btn">Iniciar Sesión</button>
+    <button id="create-note-btn" class="hidden">Crear Nota</button>
+    <div id="ads">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-TU_CODIGO_CLIENTE"
+           data-ad-slot="TU_AD_SLOT"
+           data-ad-format="auto"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </footer>
+
+  <div id="note-modal" class="hidden">
+    <div class="modal-content">
+      <h2>Crear Nueva Nota</h2>
+      <input type="text" id="note-title" placeholder="Título de la noticia" />
+      <textarea id="note-content" placeholder="Contenido de la noticia"></textarea>
+      <input type="file" id="note-image" accept="image/*" />
+      <div id="preview-container" class="preview hidden">
+        <h3 id="preview-title"></h3>
+        <p id="preview-content"></p>
+        <img id="preview-image" src="" alt="Vista previa de la imagen" />
+      </div>
+      <button id="preview-btn">Vista Previa</button>
+      <button id="save-note-btn">Guardar Nota</button>
+      <button id="cancel-btn">Cancelar</button>
+    </div>
+  </div>
+  
+  <div id="login-modal" class="hidden">
+    <div class="modal-content">
+      <h2>Acceso Restringido</h2>
+      <input type="password" id="password-input" placeholder="Contraseña" />
+      <button id="submit-password-btn">Acceder</button>
+      <button id="cancel-login-btn">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
